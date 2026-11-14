@@ -7,7 +7,7 @@ Extensao Chrome para exportar as posicoes, lançamentos e proventos da carteira 
 - Exporta posicoes renderizadas na pagina de carteira do Investidor10.
 - Mantém a exportação de posições em CSV/PDF nas carteiras Free e Pro, com o botão Expandir tudo e o atalho Abrir Posições no popup.
 - Exporta todos os lançamentos da rota `/wallet/my-wallet/pro/entries`.
-- Exporta os proventos detalhados da rota `/wallet/my-wallet/pro/earnings`, sem o resumo mensal.
+- Exporta os proventos detalhados da rota `/wallet/my-wallet/pro/earnings`.
 - Percorre a paginação das tabelas e reúne os registros antes de gerar o arquivo.
 - Gera CSV com separador `;`, adequado para planilhas em pt-BR.
 - Gera PDF com resumo por tipo de ativo e tabelas com bordas.
@@ -27,6 +27,8 @@ Extensao Chrome para exportar as posicoes, lançamentos e proventos da carteira 
 
 ## Rotas suportadas
 
+Posições (`positions`), Lançamentos (`entries`) e Proventos (`earnings`) aceitam tanto `/wallet/my-wallet/<aba>` quanto `/wallet/my-wallet/<versao>/<aba>`, com ou sem barra final, parâmetros e fragmentos. A versão pode ser `free`, `pro` ou outro identificador.
+
 - `https://investidor10.com.br/wallet/my-wallet/positions`
 - `https://investidor10.com.br/wallet/my-wallet/entries`
 - `https://investidor10.com.br/wallet/my-wallet/earnings`
@@ -41,10 +43,4 @@ Para validar sintaxe JavaScript:
 node --check background.js
 node --check popup.js
 node --check content.js
-```
-
-Para verificar a extração e exportação de posições Free/Pro e os atalhos:
-
-```bash
-node --test tests/positions.test.cjs
 ```

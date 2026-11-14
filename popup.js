@@ -2,8 +2,8 @@ const TARGET_URL = "https://investidor10.com.br/wallet/my-wallet/positions";
 const WALLET_HOST = "investidor10.com.br";
 const PAGE_PATTERNS = {
   positions: /^\/wallet\/my-wallet(?:\/[^/]+)?\/positions\/?$/i,
-  transactions: /^\/wallet\/my-wallet\/[^/]+\/entries\/?$/i,
-  dividends: /^\/wallet\/my-wallet\/[^/]+\/earnings\/?$/i
+  transactions: /^\/wallet\/my-wallet(?:\/[^/]+)?\/entries\/?$/i,
+  dividends: /^\/wallet\/my-wallet(?:\/[^/]+)?\/earnings\/?$/i
 };
 const PAGE_LABELS = {
   positions: "Posições",

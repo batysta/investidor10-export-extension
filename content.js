@@ -7,12 +7,12 @@
       basename: "investidor10-posicoes"
     },
     transactions: {
-      pattern: /^\/wallet\/my-wallet\/[^/]+\/entries\/?$/i,
+      pattern: /^\/wallet\/my-wallet(?:\/[^/]+)?\/entries\/?$/i,
       title: "Lançamentos",
       basename: "investidor10-lancamentos"
     },
     dividends: {
-      pattern: /^\/wallet\/my-wallet\/[^/]+\/earnings\/?$/i,
+      pattern: /^\/wallet\/my-wallet(?:\/[^/]+)?\/earnings\/?$/i,
       title: "Proventos",
       basename: "investidor10-proventos"
     }
