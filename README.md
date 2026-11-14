@@ -28,11 +28,8 @@ Extensao Chrome para exportar as posicoes, lançamentos e proventos da carteira 
 ## Rotas suportadas
 
 - `https://investidor10.com.br/wallet/my-wallet/positions`
-- `https://investidor10.com.br/wallet/my-wallet/*/positions`
-- `https://investidor10.com.br/wallet/my-wallet/free/positions`
-- `https://investidor10.com.br/wallet/my-wallet/pro/positions`
-- `https://investidor10.com.br/wallet/my-wallet/pro/entries`
-- `https://investidor10.com.br/wallet/my-wallet/pro/earnings`
+- `https://investidor10.com.br/wallet/my-wallet/entries`
+- `https://investidor10.com.br/wallet/my-wallet/earnings`
 
 ## Desenvolvimento
 
@@ -44,4 +41,10 @@ Para validar sintaxe JavaScript:
 node --check background.js
 node --check popup.js
 node --check content.js
+```
+
+Para verificar a extração e exportação de posições Free/Pro e os atalhos:
+
+```bash
+node --test tests/positions.test.cjs
 ```
