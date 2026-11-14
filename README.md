@@ -45,9 +45,3 @@ node --check background.js
 node --check popup.js
 node --check content.js
 ```
-
-Para verificar a extração e exportação de posições Free/Pro e os atalhos:
-
-```bash
-node --test tests/positions.test.cjs
-```
